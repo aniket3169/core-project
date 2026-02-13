@@ -1,0 +1,99 @@
+/* accordion.css */
+
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* ACCORDION ITEM */
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* HEADER */
+.accordion-button {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #f7f7f7;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.accordion-button:hover {
+  background-color: #ececec;
+}
+
+.accordion-button:focus {
+  outline: none;
+}
+
+/* LEFT SIDE EMAIL */
+.accordion-title {
+  flex: 1;
+  text-align: left;
+  word-break: break-all;
+}
+
+/* ARROW */
+.accordion-arrow {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.accordion-button.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+.delete-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* CONTENT */
+.accordion-content {
+  padding: 16px;
+  background-color: #111;
+  color: #0f0;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+  overflow-x: hidden; /* 🔑 prevents horizontal scroll */
+}
+
+/* JSON PRE */
+.accordion-content pre {
+  margin: 0;
+  white-space: pre-wrap; /* 🔑 wrap long lines */
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
